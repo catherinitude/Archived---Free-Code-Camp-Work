@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Code Camp - Basic CSS Notes!</title>
+</head>
+<body>
+        <style>
+        .green-text{
+          color: green;
+        }
+        .indigo-text{
+            color:indigo
+        }
+        .bordered{
+            border: 3px solid red;
+        }
+        </style>
+<div>
+    <h1 style="color:orangered;">CSS!</h1>
+    <p>You can add styles with CSS in HTML tags with the style attribute. This is called inline CSS.</p>
+    <p class="green-text">You can also add styles with a style block.</p>
+    <p class="indigo-text">The most popular way to style is with external files. You have to link the external page for this to work.</p>
+</div>
+    <div>
+    <h2>CSS Selectors</h2>
+    <p>When you are styling something with the style block / elements or an external file you have to select the thing you wish to apply styles too.   CSS allows for a few types of selectors:</p>
+    <ol>
+        <li>Element</li>
+        <ul>
+            <li>To set styles for every element of the same type ( all h2's) on a page you can use the elements tag (h2, p, img ) the element as the selector.</li>
+        </ul>
+        <li>Classes</li>
+        <ul>
+            <li>To use classes place [ class="class-name" ] within the opening tag of the element to be styled, then style with your preferred method.</li>
+            <li>Elements can have as many classes as needed to get the look you are going for.</li>
+            <li>Classes can be placed on as many elements as needed to get the look you are going for.</li>
+        </ul>
+        <li>??</li>
+    </ol>
+     </div>
+     <div>
+         <p> You can import fonts from google by adding a link elements with [href="https://fonts.googleapis.com/css?family=font-name" rel="stylesheet" type="text/css"] and setting the font-family property. If you do this it is best to create a fall back so that if the external font is not reachable you still have some control over the fonts. [font-family: FAMILY_NAME, GENERIC_NAME;] These generic font families include monospace, serif and sans-serif.</p>
+    </div>
+    <div class="bordered">
+<h2>BORDERS!</h2>
+<p>You can put borders around things!</p>
+    </div>
+</body>
+</html>
