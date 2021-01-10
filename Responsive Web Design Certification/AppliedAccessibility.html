@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Code Camp - Applied Accessibility Notes</title>
+</head>
+
+<body>
+    <h1>Applied Accessibility Notes</h1>
+    <p>Websites should be open and accessible to everyone. CAre should be taken to keep the needs of all needs while
+        developing. This area of web development is very important and some people devote their whole careers to
+        insuring site meet the current standards. These standards are set by <a
+            href="https://www.w3.org/WAI/fundamentals/">W3C</a>.
+    </p>
+    <h2>Some Guidelines</h2>
+    <ul>
+        <li>img tags must include an alt attribute with a brief description of the image.</li>
+        <li>If the image is purely decorative the alt attribute should be an empty string.</li>
+        <li>Headings (1-6) help structure content. Some screen readers can be set to only read headings.</li>
+        <li>Headings (1-6) should be placed in logical order, uss css of you want a different look!</li>
+        <li>Use semantic elements were appropriate.
+            <ul>
+                <li>main - goes around the main content, normally the stuff between the header and footer elements.
+                </li>
+                <li>article - a sectioning element, and is used to wrap independent, self-contained content. </li>
+                <li>section - for grouping thematically related content. (When there's no relationship between groups of
+                    content, then use a div)</li>
+                <li>header - wrap introductory information or navigation links for its parent tag and works well around
+                    content that's repeated at the top on multiple pages.</li>
+                <li>nav - wraps main navigation links</li>
+                <li>footer - primarily used to contain copyright information or links to related documents that usually
+                    sit at the bottom of a page</li>
+            </ul>
+        <li>Audio should have the controls attribute and some text for people unable to hear the sound. </li>
+        <li>Videos should have transcripts or captions added.</li>
+        <li>Use figure and figcaption to give a text alternative. For data visualizations the caption should briefly
+            summarize the trends or conclusions. </li>
+        <li>For forms...</li>
+        <ul>
+            <li>label tag wraps the text for a specific form control item, usually the name or label for a choice</li>
+            <li>for attribute on a label tag explicitly associates that label with the form control and is used by
+                screen readers.</li>
+            <li>The value of the for attribute must be the same as the value of the id attribute of the form control
+            </li>
+            <li>fieldset tag surrounds the entire grouping of radio buttons to achieve this.</li>
+            <li>Use a legend tag to provide a description for the grouping</li>
+        </ul>
+        <li>Use the time element along with a datetime attribute to standardize times.</li>
+        <li>CSS's can be used to hide content meant only for screen readers. (display: none or visibility: hidden, and
+            0px sizing remove the element and screen readers can't see them. Use some thing like: <BR>.sr-only {
+            <BR>position: absolute;
+            <BR>left: -10000px;
+            <BR>width: 1px;
+            <BR>height: 1px;
+            <BR>top: auto;
+            <BR>overflow: hidden; }
+        </li>
+    </ul>
+        <li>Colors should have at least a 4.5 to 1 contrast ratio for normal text. (<a href ="https://webaim.org/resources/contrastchecker/">test here</a>)</li>
+        <li>Having a list of "click here" or "read more" links is not helpful, try to make link text descriptive.</li>
+        <li>Use the accesskey attribute to specify a shortcut key to activate or bring focus to an element</li>
+        <li>The tabindex attribute effects keyboard focus so that you can tab from element to element. In most cases top down focus is what should be used.</li>
+    </ul>
+<p>
+    This is not the end of the line. <a
+    href="https://www.w3.org/WAI/fundamentals/">Tons more standards! </a>
+</p>
+</body>
+
+</html>
