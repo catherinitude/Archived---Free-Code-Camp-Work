@@ -2,34 +2,70 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway&family=Redressed&display=swap" rel="stylesheet">
-    <title>A Survey Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway&family=Redressed&display=swap"
+    rel="stylesheet">
+  <title>A Survey Form</title>
 </head>
+
 <body>
-<h1 id="title">My Survey Form</h1>
-<p id="description">Hey this is my survey form. Im learning so lets se what I can do. </p>
-<form id="survey-form">
-    <label id="name-label" for="name">Name:</label>
-    <input type="text" id="name" name="name" required placeholder="Name">
+  <h1 id="title">My Survey Form</h1>
+  <p id="description">Hey this is my survey form. Im learning so lets se what I can do. </p>
+  <form id="survey-form">
+    <div class="main-info">
+      <label id="name-label" for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Name">
+      <label id="email-label" for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="you@mail.com">
+      <label id="number-label" for="number">Favorite Number:</label>
+      <input type="number" id="number" name="number" placeholder="13" min="0" max="9999">
+    </div>
+    <div class="secondary-info">
+      <label for="subjects">Choose your favorite subject(so far):</label>
+      <select id="dropdown" name="subjects">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+        </div>
+      
+        <div class="color-div">
+          <label for="color">What is the best color?</label>
+        <div>
+          <input type="radio" id="color-red"
+           name="color" value="red">
+          <label for="color-red">Red</label>
+        </div>
+        <div>
+          <input type="radio" id="color-orange"
+           name="color" value="orange">
+          <label for="color-orange">Orange</label>
+        </div>
+        <div>
+          <input type="radio" id="color-black"
+           name="color" value="mail">
+          <label for="color-black">Black</label>
+        </div>
+      </div>
+        <div class="checkboxs">
+          <label for="tech">What techs are you looking forward to learning?</label><br>
+          <input type="checkbox" name="tech" value="React">React</input>
+          <input type="checkbox" name="tech" value="Rust">Rust</input>
+          <input type="checkbox" name="tech" value="PhP">PhP</input>
+        </div>
 
-    <label id="email-label"for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required placeholder="you@mail.com">
-
-    <label id="number-label" for="number">Favorite Number:<label>
-    <input type="number" id="number" name="number" placeholder="13" min="0" max="9999">
-
-    <label for="subjects">Choose your favorite subject:</label>
-<select id="dropdown" name="subjects">
-  <option value="html">HTML</option>
-  <option value="css">CSS</option>
-  <option value="javascript">JavaScript</option>
-
-</select>
-</form>
+        <div>
+          <textarea id="textarea" name="textarea" rows="4" cols="50">
+Any other thoughts?
+</textarea>
+        </div>
+        <button id="submit" type="input">Submit</button>
+  </form>
 </body>
+
 </html>

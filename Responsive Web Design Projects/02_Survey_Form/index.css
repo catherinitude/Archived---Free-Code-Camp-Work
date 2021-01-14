@@ -10,3 +10,43 @@ ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; 	border-spacing: 0; }
+
+body{
+   font-size: 62.5%; /* for responsive goodness */
+   font-family: "Raleway";
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+h1 {
+   font-size: 5em;
+   font-family: "Potta One";
+   padding: 1em 0;
+ }
+ button, input, select, option, textarea {
+   font-family: "Raleway";
+   padding: 1em;
+   font-size: 1.7em;
+ }
+ label{
+    line-height: 2em;
+    padding: 0.5em 0em;
+    font-size: 1.7em;
+ }
+ p{
+    font-size: 1.6em;
+ }
+ .main-info, .secondary-info{
+   display: flex; 
+   flex-direction: column;
+ }
+ .color-div,  .checkboxs {
+    font-size: 1.3em;
+    padding: 1.5em 2em;
+ }
+ button{
+    margin-top: 2em;
+    padding: 1em 5em;
+ }
+
+
