@@ -11,3 +11,43 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; 	border-spacing: 0; }
 
+body{
+   margin: 1em 10vw;
+   font-family: "Raleway";
+   font-size: 62.5%;
+}
+#wrap{
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   justify-self: center;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   align-self: center;
+}
+#header{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+
+}
+#main, #video, #benefits, #packages{
+   flex-direction: column;
+   align-content: center;
+   align-self: center;
+   align-items: center;
+}
+h2{
+   font-size: 2.5em;
+}
+h3{
+   font-size: 2em;
+}
+h4{
+   font-size: 1.5em;
+}
+p{
+   padding: 2em;
+   line-height: 3em;
+}
