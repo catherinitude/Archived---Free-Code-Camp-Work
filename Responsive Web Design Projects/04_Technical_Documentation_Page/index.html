@@ -1,4 +1,4 @@
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +10,85 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway&family=Redressed&display=swap"
     rel="stylesheet">
-  <title></title>
+  <title>Technical Documentation Page</title>
 </head>
-
 <body>
- 
-</body>
+  
+<nav id="navbar">
+  <header>Random Topics</header>
+  <a class="nav-link" href="#HTML">HTML</a><br>
+  <a class="nav-link" href="#CSS">CSS</a><br>
+  <a class="nav-link" href="#JavaScript">JavaScript</a><br>
+  <a class="nav-link" href="#React">React</a><br>
+  <a class="nav-link" href="#Bootstrap">Bootstrap</a><br>
+  <a class="nav-link" href="#Notes">Notes</a>
+</nav>
 
+<main id="main-doc">
+
+  <section class="main-section" id="HTML">
+    <header>HTML</header>
+    <p>HTML stands for Hyper Text Markup Language. Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. </p>
+    <p>
+      HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as &#60;img&#62; and &#60;/img &#62; directly introduce content into the page.
+    </p>
+    <h2> Example: Paragraph Element</h2>
+    <code>
+      &#60;p> The text here will format as a Paragraph! &#60;/p>
+    </code>
+  </section>
+
+  <section class="main-section" id="CSS">
+    <header>CSS</header>
+    <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+    <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+    <h2> Example: </h2>
+    <code>
+      p { color: red; }
+    </code>
+  </section>
+  <section class="main-section" id="JavaScript">
+    <header>JavaScript</header>
+    <p>Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.</p>
+    <p>As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). However, ECMAScript itself does not include any input/output (I/O), such as networking, storage, or graphics facilities, as the host environment (usually a web browser) provides those APIs.</p>
+    <h2> Example: </h2>
+    <code>
+      let myNumber = 2;
+    </code>
+  </section>
+
+  <section class="main-section" id="React">
+    <header>React</header>
+    <p>React (also known as React.js or ReactJS) is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing. React Router is an example of such a library.</p>
+    <p>React was created by Jordan Walke, a software engineer at Facebook, who released an early prototype of React called "FaxJS". He was influenced by XHP, an HTML component library for PHP. It was first deployed on Facebook's News Feed in 2011 and later on Instagram in 2012. It was open-sourced at JSConf US in May 2013.</p>
+    <h2> Example: </h2>
+    <code>
+      ReactDOM.render(
+       &#60;Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
+    </code>
+  </section>
+
+    <section class="main-section" id="Bootstrap">
+    <header>Bootstrap </header>
+    <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</p>
+    <h2> Example: </h2>
+    <code>
+     &#60;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&#60;/button>
+    </code>
+  </section>
+  <section class="main-section" id="Notes">
+    <header>Notes</header>
+    <p>So like most projects I have here, this was built only to show I understand concepts enough to create this. This is not meant to be a huge source of knowledge. The text here was taken from the wikipedia page on each technology stack. If you want more info check them out here :</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/React_(web_framework)">React</a></li>
+      <li><a href="https://devdocs.io/">https://devdocs.io/</a></li>
+    </ul>
+    <p>The above link to devdocs.io Is an amazing resource that I highly recommend for many languages.</p>
+  </section>
+
+</main>
+</body>
 </html>
