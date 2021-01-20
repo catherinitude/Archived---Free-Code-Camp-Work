@@ -11,3 +11,79 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; 	border-spacing: 0; }
 
+body{
+   margin-left: 200px;
+   font-size: 62.5%;
+ }
+ header{
+   font-size: 2.5em;
+   padding: .75em ;
+ }
+ p{
+    font-size: 2em;
+    line-height: 2em;
+    padding: 1em;
+ }
+ code{
+    background-color: lightgray;
+    border: rgb(0, 0, 0) solid 2px;
+    padding: 1em;
+    font-size: 1.8em;
+    margin-left: 6em;
+ }
+ #navbar{
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   background-color: cornsilk;
+   height: 100vh;
+   border-right: black solid 6px; ;
+ }
+ .nav-link{
+    font-size: 2.4em;
+    color: black;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    border-top: black solid 1px;
+ }
+ .nav-link:last-of-type{
+border-bottom: black solid 1px;
+ }
+ h2{
+    font-size: 1.9em;
+    padding: 2em;
+ }
+ section{
+   padding: 2.5em 0;
+   width: 80%;
+   border-left: black 6px solid;
+ }
+ section:nth-child(2), section:nth-child(4){
+    background-color: lightcoral;
+
+ }
+ section:nth-child(1), section:nth-child(3), section:nth-child(5){
+   background-color: lightsteelblue;
+}
+section:last-of-type{
+   background-color: palegoldenrod;
+}
+li a{
+   font-size: 2.4em;
+   color: black;
+   padding: 1em;
+   display: block;
+   text-decoration: none;
+}
+a:hover{
+   text-decoration: underline;
+
+}
+
+@media(max-width:800px){
+   code, h2{
+   display: none;
+   }
+
+}
