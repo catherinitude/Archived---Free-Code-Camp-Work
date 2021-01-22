@@ -10,31 +10,138 @@ ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; 	border-spacing: 0; }
+body{
+   font-size: 62.5%;
+   font-family: "Raleway";
+   letter-spacing: 0.5em;
+   line-height: 2em;
+   text-align: center;
+   background-color: black;
+}
 
 #navbar{
    width: 100%;
-   height: 7vh;
+   height: 100%;
    background-color: black;
    position: fixed;
    top: 0px;
+   text-align: right;
+}
+#navbar a{
+   color: orangered;
+   font-size: 3em;
+   vertical-align: middle;
+   text-align: right;
+   padding: 2em;
+}
+.links{
+   padding-top: 3em;
 }
 #welcome-section{
    background-color: orangered;
    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.inset{
+   width: 100%;
+   height: 50%;
+   background-color: rgba(77, 22, 2, 0.089);   
+}
+.inset p{
+   font-size: 1.8em;
+   font-weight: 900;
+   padding: 2em;
+}
+h1,h2{
+   color: black;
+   font-family: "Redressed";
+   font-size: 6em;
+   text-shadow: white 3px 1px 10px;
+   padding-top: 1.5em;
+   padding-bottom: 1.5em;
 }
 #projects{
    background-color: #FF8B60;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
 }
-.project-card{
+.tiles{
+   background-color: #FF8B60;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   width: 50%;
+
+}
+.project-tile{
    background-color: black;
    border: 1px black solid;
    border-radius: 5%;
-   width: 200px;
+   width: 40%;
+   height: auto;
+   padding: 1em;
+   margin: 1em;
+}
+.project-img{
+   padding: 1em;
+}
+.project-title{
+   padding: 1em;
+}
+.project-title a {
+   color: white;
+   font-size: 1.6em;
+
 }
 #contact{
-   background-color: #0A64A4;
+   background-color: black;
+   height: 50vh;
 }
 .project-card  img{
-   height: 100px;
-   width: 100px;
+   height: 200px;
+   width: 200px;
+}
+#contact {
+   color: white;
+}
+#contact h2{
+   color: white;
+   text-shadow: orangered 3px 1px 10px;
+}
+#contact p{
+   font-size: 1.8em;
+   padding: 0 10%;
+   text-align: justify;
+}
+#contact a{
+   color: orangered;
+}
+@media(max-width:800px){
+   #navbar{
+      width: 100%;
+      height: 105px;
+      line-height: 3em;
+   }
+   @media(max-width:500px){
+      #navbar{
+         width: 100%;
+         height: 155px;
+         line-height: 3em;
+      }
+      body{
+         line-height: 5em;
+      }
+      .project-tile{
+         width: 100%;
+   }
+      #contact {
+         height: auto
+         };
 }
