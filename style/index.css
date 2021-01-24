@@ -11,63 +11,103 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; 	border-spacing: 0; }
 
-body{  /*  Sets styles for basic overall page*/
-    margin: 6em 32em;
-    font-size: 62.5%;   /*62.5% is equal to 10px, usually. this will help make using responsive units easy! */
-}
+/*  Sets styles for basic overall page elements*/
+     body{  
+          font-size: 62.5%;   /*62.5% is equal to 10px, usually. this will help make using responsive units easy! */
+          font-family: "Raleway";
+     }
+     h1{
+          font-size: 3em;
+          padding: 3em 0.5em;
+          font-variant: small-caps;
+          font-family: "Potta One";
+     }
+     h2{
+          font-size: 2.6em;
+          padding-bottom: 1em;
+          font-variant: small-caps;
+          font-family: "Potta One";
+          padding: 1em 0.5em; 
+     }
+     h3{
+          font-size: 2.5em;
+          padding-bottom: 1em;
+          font-variant: small-caps;
+          padding: 1em 0.5em; 
+     }
+     p{
+          font-size: 1.9em;
+          padding: .5em .7em;
+          line-height: 30px;
+     }
+     a{
+          text-decoration: overline;
+          color: black;          
+     }
 
-h1{
-    font-size: 2.6em;
-    padding: 1.0em;
-    font-variant: small-caps;
-}
+/*  styles for the navigation */
+     nav{
+          background-color: black;
+          z-index: 100;
+          position: fixed;
+          left: 0;
+          top:0;
+          height: 100%;
+          padding: 1.5em;
+     }
+     nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 25em;
+          margin-left: 0.5em;
+     }
+     nav ul li a {
+          display:inline-block;
+          padding: .5em .5em;
+          text-decoration: none;
+          font-size: 2em;
+          font-family: "Potta One";
+          vertical-align: middle;
+     }
+     nav ul li a:hover {
+          border-left: 9px double wheat;
+          transform: skewX(2deg);
+     }
 
-h2{
-    font-size: 2.0em;
-    padding: 1.0em;
-    font-variant: small-caps;
-}
-p{
-    font-size: 1.6em;
-    padding: 0.1em 2em;
-    line-height: 24px;
-}
-/*  styles for the navigation list */
-nav{
-    background-color: black;
-    z-index: 100;
-    position: fixed;
-    left: 5vw;
-    top:0vh;
-    height: 100%;
-    padding-top: 5em;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 20em;
-    margin-left: 1em;
-  }
-  li a {
-    display: block;
-    color: orangered;
-    padding: 8px 16px;
-    text-decoration: none;
-    font: 1.8em;
-    font-size: 1.5em;
-  }
+/* code box styles */
+     code{
+          background-color: #eee;
+          margin-left: 1em;
+          border: 1px solid #999;
+          display: block;
+          padding: 1em;
+          width: fit-content;
+          font-size: 2em;
+          line-height: 2em;
+     }  
+/* basic list styling */
+     ul{
+          
+     }
 
-  
-  /* Change the link color on hover */
-  li a:hover {
-    border-left: 5px dotted orangered;
-    font-size: 1.5em;
-  }
-  li a:active{
-      text-decoration: underline;
-  }
 
-.code-box{/*  class places a style to highlight your looking at code */
+/* Main Area Styling */
+     main{
+          margin-left: 29em;
+     }
 
-}
+/*  Color Coding for nice? (at least organized) looking page */
+     .chartreuse-text{
+          color: chartreuse;
+     }
+     .chartreuse-border{
+          border-left: .5em dotted chartreuse;
+          
+     }
+     .rwd-cert-links a{
+          color: cornflowerblue;
+     }
+     .rwd-cert-border  h2{
+          border-left: .5em dotted cornflowerblue;
+     }     

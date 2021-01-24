@@ -2,60 +2,271 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index.css">
-    <title>Responsive Web Design Certification Notes</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          <link rel="stylesheet" href="style/index.css">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Raleway&family=Redressed&display=swap" rel="stylesheet">
+          
+          <title>Web Development Notes</title>
 </head>
 
 <body>
-    <header>
-        <h1>Responsive Web Design Certification Notes</h1>
-        <nav>
-            <ul>
-                <li><a href="#NOTES">Notes about the Notes</a></li>
-                <li><a href="#HTML">Basic HTML and HTML5</a></li>
-                <li><a href="#CSS">Basic CSS</a></li>
-                <li><a href="#AVD">Applied Visual Design</a></li>
-                <li><a href="#AA">Applied Accessibility</a></li>
-                <li><a href="#RWDP">Responsive Web Design Principles</a></li>
-                <li><a href="#FLEX">CSS Flexbox</a></li>
-                <li><a href="#GRID">CSS Grid</a></li>
-        </nav>
-    </header>
-    <main>
-        <h2 id="NOTES">Notes about the Notes!</h2>
-        <p>These notes are not meant to be a full documentation of these topics. They were created for me as a
-            reference. Most of the information here is directly from the the site <a
-                href=https://www.freecodecamp.org/learn>Free Code Camp</a>. From time to time I may have done extra
-            research on an item and included it here.
-        <p>
-        <p>When I started creating these notes I had no clue what I was doing and did not focus on anything but learning the topics at hand. I made a page for each subject and linked to the next at the bottom. This was not easy to navigate! I also did not style the information, something I plan on fixing here! I am by no means and expert but I think I can do much better organizing this data on one easy to navigate page after learning what I have.
-        </p>
-        <section id="HTML">
-            <h2 >Basic HTML and HTML5</h2>
-        </section>
-        <section id="CSS">
-            <h2>Basic CSS</h2>
-        </section>
-        <section h2 id="AVD">
-            <h2>Applied Visual Design</h2>
-        </section>
-        <section >
-            <h2 id="AA">Applied Accessibility</h2>
-        </section>
-        <section id="RWDP">
-            <h2>Responsive Web Design Principles</h2>
-        </section>
-        <section id="FLEX">
-            <h2>CSS Flexbox</h2>
-        </section>
-        <section id="GRID">
-            <h2>CSS Grid</h2>
-        </section>
-    </main>
-    <footer>
-    </footer>
-</body>
+     <header>
+          
+          <nav>
+               <ul>
+                    <li><a class="chartreuse-text" href="#notes">Notes about the Notes</a></li>
+                    <section class="rwd-cert-links">
+                        <li><a href="#html">Basic HTML and HTML5</a></li>
+                        <li><a href="#css">Basic CSS</a></li>
+                        <li><a href="#avd">Applied Visual Design</a></li>
+                        <li><a href="#AA">Applied Accessibility</a></li>
+                        <li><a href="#rwdp">Responsive Web Design Principles</a></li>
+                        <li><a href="#flex">CSS Flexbox</a></li>
+                        <li><a href="#grid">CSS Grid</a></li>
+                    <section>
+          </nav>
+     </header>
+     <main>
+          <h1>Web Development Notes</h1>
+          <section id="notes">
+               <h2 class="chartreuse-border">Notes about the Notes!</h2>
+               <p>
+                    These notes are not meant to be a full documentation of these topics. They were created for me as a
+                    reference. Most of the information here is directly from the the site <a
+                        href=https://www.freecodecamp.org/learn>Free Code Camp</a>. From time to time I may have done
+                    extra research and included some of that information here. Adding the credit and source of outside
+                    information will be a high priority.
+               <p>
+               <p>
+                    When I started creating these notes I had no clue what I was doing and did not focus on anything but
+                    learning the topics at hand. I made a page for each subject and linked to the next at the bottom.
+                    This was not easy to navigate! I also did not style the information, something I plan on fixing
+                    here! I am by no means and expert but I think I can do much better organizing this data on one easy
+                    to navigate page after learning what I have.
+               </p>
+               <p>
+                    I started revamping things as I was working my way through the projects at the end of the Responsive
+                    Web Design Certification Section of <a href=https://www.freecodecamp.org/learn>Free Code Camp</a>
+                    and I will continue to update this as I learn more skills! 
+               </p>
+          </section>
+           <section class="rwd-cert-border"> 
+               <section id="html" class=".cornflowerblue-border">
+                    <h2 class=".cornflowerblue-border">Basic HTML and HTML5</h2>
+                    <section>
+                    <h3>Tag Anatomy</h3>
+                         <p>
+                              HTML is compose of tags. Browsers use these tags to format the structure of a webpage and display content. Most of the tags require both opening and closing tags. There are a handful of self closing tags. These tags are used to define Elements.
+                         </p>
+                         <pre>
+                              <code>&#60;opening tag&#62; Content &#60;closing tag&#62;</code>
+                         </pre>
+                         <p>
+                              Several things can go in the opening tag, but the element name is mandatory and should be the first thing in the tag. Opening tags can also include attributes, some elements even require attributes.  Closing tags hold the element name preceded by a slash (/). Below is an example of a tag with some attributes. This tag will place a link on the page, with a class, id and a title. Because of the target attribute it will open uin a new tap or window.
+                         </p>   
+                         <pre>
+                              <code>&#60;a href="https://www.google.com/" class"my-class" id="my-id" title="Link to google search" target="_blank"&#62; Content &#60;/a&#62;                              </code>
+                         </pre>
+                    </section>
+                    <section>
+                    <h3 id="boilerplate">HTML Boilerplate</h3>
+                    <pre>
+                         <code>&#60;!DOCTYPE html>
+&#60;html>
+     &#60;head>
+          &#60;meta charset="UTF-8"&#62
+          &#60;meta name="viewport" content="width=device-width,initial-scale=1"&#62
+          &#60;title&#62; title &#60/title&#62
+          &#60;meta name="author" content="name"&#62
+          &#60;meta name="description" content="description here"&#62
+          &#60;meta name="keywords" content="keywords,here"&#62
+          &#60;link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"&#62
+          &#60;link rel="stylesheet" href="stylesheet.css" type="text/css"&#62
+     &#60;/head&#62
+     &#60;body&#62
+          Content Lives Here     
+     &#60;/body&#62
+&#60;/html&#62</code>
+                    </pre>
+                    </section>
+                    <section>
+                    <h3>A Multitude of Elements</h3>
+                         <p>
+                              HTML has a ton of elements to help structure a page. Some of these tags are on every HTML page and some are rarely used. A list of every tag  (I think) can be found on <a href="https://devdocs.io/html-elements/" title="Link to devDocs.io">DevDocs.io</a>. Convention is to keep elements lowercase.
+                         </p>
+                         <p>
+                              Tags that are on every page don't directly do anything to the page content, they provide data to help other things structure the page, import styles and scripts, and provide meta information. These type of tags live in the head section of the page. If you look at the <a href="#boilerplate">boilerplate</a> above you can see some examples. More information about the head section and what it can house can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" title="Link to MDN Web Docs">MDN Web Docs</a>.
+                         </p>
+                         <p>
+                              Other elements are "fancy containers". These are called semantic elements, they have a meaning and hold certain type of data. These elements help with search engine optimization, other read your code,  as well as accessability. A few semantic elements are:
+                         </p>
+                         <div class="html-element-examples">
+                              <section element-box>
+                                   <div class="element-name">&#60 header &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Contains intro information such as logos, section titles and navigation elements</li>
+                                             <li>Can have many header sections on a page</li>
+                                             <li>Don't place within the footer, address or other header tags</li>
+                                        </ul>
+                                        </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 section &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Contains sections within the page </li>
+                                             <li>Sections are groupings of like content</li>
+                                             <li>Can have unlimited per page</li>
+                                             <li>Normally have a sub-title then content</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 article &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Contains independent/self-contained content</li>
+                                             <li>Should be able to take this and have it stand on its own</li>
+                                             <li>Common uses are: forum posts, blog post and articles</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 nav &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Holds navigation elements</li>
+                                             <li>Intended for blocks of links for navigating the site</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 footer &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Normally placed at the bottom of a page</li>
+                                             <li>Holds repetitive information such as: copyright, navigation, contact and legal information.</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                         <p>
+                         Semantic elements are important, but they generally don't create anything we can see on the page. HTML has a ton of elements that do create things we can display on the page, too many to go over here. Some commons ones are:
+                         </p>
+                         <div class="html-element-examples">
+                              <section element-box>
+                                   <div class="element-name">&#60 h1 &#62, &#60 h2 &#62,&#60 h3 &#62,&#60 h4 &#62,&#60 h5 &#62,&#60 h6 &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>These elements are used for header information</li>
+                                             <li>Avoid using heading tags to resize text. Instead, use the CSS font-size propert.</li>
+                                             <li>Avoid skipping heading levels: always start from h1, followed by h2 and so on.</li>
+                                             <li>One h1 per page, should be the main title of the page.</li>
+                                        </ul>
+                                        </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 a &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>Creates a link out of the contents of the tags</li>
+                                             <li>Requires a href attribute</li>
+                                             <li>The target attribute allows you to specify where to open the link</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 img &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>used to display images</li>
+                                             <li>Requires a src attribute that points to the source of the image</li>
+                                             <li>Requires a alt attribute that provides a text alternative for display if the image can't be displayed for some reason (leave empty if image is only decorative)</li>
+                                             <li>Always give a height and width to img elements</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 ol &#62, &#60 ul &#62, &#60 li &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>These elements form lists</li>
+                                             <li>Ordered Lists are prefixed by numbers</li>
+                                             <li>Unordered List are prefixed by bullets</li>
+                                             <li>List items are placed withing the list type tags and contain the </li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60 !-- &#62 and &#60  -- &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li>HTML comments</li>
+                                             <li>Anything between these tags are not displaied on the page</li>
+                                             <li>Useful for adding notes to code</li>
+                                             <li>Useful for troubleshooting with problems occur</li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60  &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60  &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ul>
+                                   </div>
+                              </section>
+                              <section element-box>
+                                   <div class="element-name">&#60  &#62</div>
+                                   <div class="element-info">
+                                        <ul>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ul>
+                                   </div>
+                              </section>
+               </section>
 
+                         </div>
+               </section>
+               <section id="css">
+                    <h2>Basic CSS</h2>
+               </section>
+               <section h2 id="avd">
+                    <h2>Applied Visual Design</h2>
+               </section>
+               <section>
+                    <h2 id="aa">Applied Accessibility</h2>
+               </section>
+               <section id="redp">
+                    <h2>Responsive Web Design Principles</h2>
+               </section>
+               <section id="flex">
+                    <h2>CSS Flexbox</h2>
+               </section>
+               <section id="grid">
+                    <h2>CSS Grid</h2>
+               </section>
+          </section>
+     </main>
+</body>
 </html>
