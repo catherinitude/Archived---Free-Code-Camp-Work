@@ -37,13 +37,36 @@ table { border-collapse: collapse; 	border-spacing: 0; }
      }
      p{
           font-size: 1.9em;
-          padding: .5em .7em;
+          padding: 1.5em 0.7em;
           line-height: 30px;
      }
      a{
           text-decoration: overline;
           color: black;          
      }
+
+     hr {
+          overflow: visible; /* For IE */
+          padding: 0;
+          border: none;
+          border-top: medium double #333;
+          color: #333;
+          text-align: center;
+          max-width: 50%;
+      }
+      hr:after {
+          content: "  --  （⋆＾－＾⋆）  --  ";
+          display: inline-block;
+          position: relative;
+          top: -0.7em;
+          font-size: 1.5em;
+          padding: 0 0.25em;
+          background: white;
+      }
+      section{
+           padding-top: 5em;
+           padding-bottom: 2em;
+      }
 
 /*  styles for the navigation */
      nav{
@@ -64,9 +87,9 @@ table { border-collapse: collapse; 	border-spacing: 0; }
      }
      nav ul li a {
           display:inline-block;
-          padding: .5em .5em;
+          padding: .25em .5em;
           text-decoration: none;
-          font-size: 2em;
+          font-size: 1.6em;
           font-family: "Potta One";
           vertical-align: middle;
      }
@@ -87,10 +110,19 @@ table { border-collapse: collapse; 	border-spacing: 0; }
           line-height: 2em;
      }  
 /* basic list styling */
-     ul{
-          
+     .html-element-examples ul{
+          font-size: 1.8em;
+          margin-left: 2em;
      }
-
+     .html-element-examples ul li{
+          line-height: 2em;
+          list-style-type: square;
+     }
+     .element-name{
+          font-weight: bold;
+          padding: 2em;
+          font-size: 1.8em;
+     }
 
 /* Main Area Styling */
      main{
@@ -110,4 +142,10 @@ table { border-collapse: collapse; 	border-spacing: 0; }
      }
      .rwd-cert-border  h2{
           border-left: .5em dotted cornflowerblue;
+     }     
+     .jsa-ds-cert-links a{
+          color: peru;
+     }
+     .jsa-ds-cert-border  h2{
+          border-left: .5em dotted peru;
      }     
