@@ -275,7 +275,196 @@
           <section class="jsa-ds-cert-border"> 
                <section h2 id="basic-js">
                     <h2>Basic JavaScript</h2>
-               </section>
+                    <section>
+                         <h3>The basics and commenting</h3>
+                              <p>
+                                JavaScript allows for function and logic on a page and can get complicated as the function grows. Because of this keeping code formatted in a consistent way is important. To help keep things straight for not only yourself but others leaving valuable comments is good practice. comments can be placed like so"
+                              </p>
+                              <pre>
+                                   <code>// This is a single line comment.
+
+/* This is a
+multi-line
+comment */
+                                   </code>
+                              </pre>
+                    </section>
+                    <section>
+                    <h3>Variables and Data types</h3>
+                    <p>
+                         JavaScript allows many types of data, but is a 'loosely typed' language that does not require you to tell the code what your data is when you declare it.  Declaring a variable means that you are telling your program you have some data and what you want to call that data. For example if we needed to do something in your code based on age you might create (declare) a variable called age. 
+                    </p>
+                    <pre>
+                         <code>keyword name = value; </code>
+                    </pre>
+                    <p>
+                         Above is the anatomy of a variable declaration. The keyword can be one of 
+                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target=_blank>var</a>,  
+                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target=_blank>let</a>, or  
+                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target=_blank>const</a>. The name must start with a letter but can be any combination of letters, numbers, underscores and dollar signs. Names are also case sensitive. The equals sign is called the assignment operator in java script. You are assigning the value you set to the name you set.  The value can be any number of things. The only thing to consider is if the value is a string (words) or a numerical value. Numerical values and strings don't mix, 5 + apple is not something you can do. Strings are encapsulated with single or double quotes. 
+                    </p>
+                    </section>
+                    <section>
+                         <h3>Variable Manipulation</h3>
+                              <p>
+                                   The whole point of having variables to store and use changeable data and of course we have several ways to do this! You can simply give the variable a new value buy reassigning it something new. This new value can even be another variable or the result of other parts of the program.
+                              </p>
+                              <pre>
+                                   <code>//creating variables with no values
+var a;
+var b;
+var c; 
+
+//adding values to the variables
+a = a + 1;
+b = b + 5;
+c = c + " String!";
+</code>
+</pre>
+                    </section>
+                    <section>
+                    <h3>camelCase</h3>
+                         <p>
+                              Camel Case is the industry standard for naming variable in JavaScript.  With this way f writing variables you start with a lowercase letter then capitalize every word in a multi-word variable. thisIsAveryLongVariableNameButItIsInCamleCase.
+                         </p>
+                    </section>
+                    <section>
+                         <h3>Common Operators</h3>
+                              <p>
+                                    JavaScript has several operators that allow basic math and logic to be handled. 
+                              </p>
+                              <table>
+                                   <thead>
+                                        <tr>
+                                             <th colspan="3">Mathematical Operators</th>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr>
+                                             <th>Operator</th>
+                                             <th>Description</th>
+                                             <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">+</td>
+                                             <td>Addition</td>
+                                             <td> myNum + 40;</td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">-</td>
+                                             <td>Subtraction</td>
+                                             <td> myNum - 40;</td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">*</td>
+                                             <td>Multiplication</td>
+                                             <td> myNum * 40;</td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">-</td>
+                                             <td>Division</td>
+                                             <td> myNum / 40;</td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">%</td>
+                                             <td>Remainder</td>
+                                             <td> 5 % 2 // is equal to 1 </td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">++</td>
+                                             <td>Decrement ( is equivalent to myNum = myNum + 1 )</td>
+                                             <td>myNum++</td>
+                                        </tr>
+                                        <tr>
+                                             <td class="centered">--</td>
+                                             <td>Increment ( is equivalent to myNum = myNum - 1 )</td>
+                                             <td>myNum--</td>
+                                        </tr>
+                                   </table>
+                                   <table>
+                                        <thead>
+                                             <tr>
+                                                  <th colspan="3">Compound Assignment Operators</th>
+                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <th>Operator</th>
+                                                  <th>Description</th>
+                                                  <th>Example</th>
+                                             </tr>
+                                             <tr>
+                                                  <td class="centered">+=</td>
+                                                  <td>Addition with assignment</td>
+                                                  <td> myNum += 40; // is the same as myNum = myNum + 40;</td>
+                                             </tr>
+                                             <tr>
+                                                  <td class="centered">-=</td>
+                                                  <td>Subtraction with assignment</td>
+                                                  <td> myNum -= 40; // is the same as myNum = myNum - 40;</td>
+                                             </tr>
+                                             <tr>
+                                                  <td class="centered">*=</td>
+                                                  <td>Multiplication with assignment</td>
+                                                  <td> myNum *= 40; // is the same as myNum = myNum * 40;</td>
+                                             </tr>
+                                             <tr>
+                                                  <td class="centered">/=</td>
+                                                  <td>Division with assignment</td>
+                                                  <td> myNum /= 40; // is the same as myNum = myNum / 40;</td>
+                                             </tr>
+                                             
+                                        </table>
+                    </section>
+                    <section>
+                         <h3>Dealing with Strings</h3>
+                              <p>
+                                   As said before strings are encapsulated with quotes, but what if you need your string to have quotes? There are a few ways to do this. First you can escape the string.  This is done by placing \ before each quote that needs to be escaped.  This can be tricky and take up a ton of time if you need to escape a large about of quotes.  An easier way is to encapsulate your string with single quotes, doing this allows you to use double quotes in the string.
+                              </p>
+                         <pre>
+                              <code>var sampleStr = "I am \"Escaping!\" The string."; 
+Var singleQuote = 'I can use "as" many "quotes" as "I" want';
+                              </code>
+                         </pre>
+                         <p>
+                          Quotes are not the only thing you can escape in strings. To be honest I hope to learn a better way to do this. If for some reason its is needed more information can be found over at <a href="https://www.w3schools.com/js/js_strings.asp" target="blank">w3schools</a>.
+                         </p>
+                         <p>
+                         Finally you can "add" strings together with the addition operators ( + and +=). This is called concatenation. You can also display variables via concatenation.
+                         </p>
+                         <pre>
+                              <code>var myName = "Catherinitude";
+var myStr = 'My name is ' + myName +' and I am well!';
+                              </code>
+                         </pre>
+                    <p>
+                    JavaScript allow for us to get information about data including strings. One of them is .length and it is used like so:
+                    </p>
+                    <pre>
+                         <code>myString.length</code>
+                    </pre>
+                    <p>
+                         This will return an integer that is equal to the number of characters in the string (minus 1). This is because JavaScript is a Zero-based indexing language. This means that the first value is 0.  .length works much the same with other things. some Examples:
+                    </p>
+                    <pre>
+                         <code>var myString= 'Hello from JavaScript';
+myString.length will return 21
+</code>
+                    </pre>
+                    <p>
+                         You can target specific parts of a string by adding brackets at the end and adding the position you wish to target.  You can ask for .length-1 to get the last value.
+                    </p>
+                    <pre>
+                    <code>var myString= 'Hello from JavaScript';
+myString.length[7]      // will return r
+myString.[myString.length-1]      //  will return t
+myString.[myString.length-4]      //  will return r</code>
+</pre>
+                    </section>
+                    </section>
+                    <section>
+                         <h3>Arrays</h3>
+                    </section>
                <section h2 id="es6">
                     <h2>ES6</h2>
                </section>
