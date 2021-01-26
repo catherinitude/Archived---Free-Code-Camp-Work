@@ -292,7 +292,7 @@ comment */
                     <section>
                     <h3>Variables and Data types</h3>
                     <p>
-                         JavaScript allows many types of data, but is a 'loosely typed' language that does not require you to tell the code what your data is when you declare it.  Declaring a variable means that you are telling your program you have some data and what you want to call that data. For example if we needed to do something in your code based on age you might create (declare) a variable called age. 
+                         JavaScript allows many types of data, but is a 'loosely typed' language that does not require you to tell the code what your data is when you declare it.  Declaring a variable means that you are telling your program you have some data and what you want to call that data. For example if we needed to do something in your code based on age you might create (declare) a variable called age. There are many data types, you can see them at <a href="https://www.w3schools.com/js/js_datatypes.asp" target="_blank">w3schools.com</a>.
                     </p>
                     <pre>
                          <code>keyword name = value; </code>
@@ -413,7 +413,76 @@ c = c + " String!";
                                                   <td>Division with assignment</td>
                                                   <td> myNum /= 40; // is the same as myNum = myNum / 40;</td>
                                              </tr>
-                                             
+                                        </table>
+                                        <table>
+                                             <thead>
+                                                  <tr>
+                                                       <th colspan="3" id="logops">Logical Operators</th>
+                                                  </tr>
+                                             </thead>
+                                        <tbody>
+                                             <tr>
+                                                  <th>Operator</th>
+                                                  <th>Description</th>
+                                                  <th>Example</th>
+                                             </tr>
+                                             <tr>
+                                                  <td>==</td>
+                                                  <td>equal to</td>
+                                                  <td> a == b    //true if a is equivalent to b </td>
+                                             </tr>
+                                             <tr>
+                                                  <td>===</td>
+                                                  <td>equal value and equal type</td>
+                                                  <td>a === b      //true if a is equivalent to b in bother value and type</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>!=</td>
+                                                  <td>not equal</td>
+                                                  <td>a != b       // true if a is not equivalent to b</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>!==</td>
+                                                  <td>not equal value or type</td>
+                                                  <td>a !== b       // true if a is not equivalent to b value and type</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>></td>
+                                                  <td>greater than</td>
+                                                  <td>a > b        // true if a is greater than b</td>
+                                             </tr>
+                                             <tr>
+                                                  <td><</td>
+                                                  <td>less than</td>
+                                                  <td>a < b        // true if a is less than b</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>>=</td>
+                                                  <td>greater than or equal to</td>
+                                                  <td>a >= b     //true if a is greater thank or equivalent to b</td>
+                                             </tr>
+                                             <tr>
+                                                  <td><=</td>
+                                                  <td>less than or equal to</td>
+                                                  <td>a <= b     //true if a is less than or equivalent to b</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>&&</td>
+                                                  <td>and</td>
+                                                  <td>a < 1 && b < 1  // true if both a and b are less than 1 </td>
+                                             </tr>
+                                             <tr>
+                                                  <td>||</td>
+                                                  <td>or</td>
+                                                  <td>a < 1 || b < 1  // true if either a or b are less than 1 </td>
+                                             </tr>
+                                             <tr>
+                                                  <td>!</td>
+                                                  <td>not</td>
+                                                  <td>!a  || !b   // true if either a or b are false </td>
+                                             </tr>
+
+
                                         </table>
                     </section>
                     <section>
@@ -434,8 +503,7 @@ Var singleQuote = 'I can use "as" many "quotes" as "I" want';
                          </p>
                          <pre>
                               <code>var myName = "Catherinitude";
-var myStr = 'My name is ' + myName +' and I am well!';
-                              </code>
+var myStr = 'My name is ' + myName +' and I am well!'; </code>
                          </pre>
                     <p>
                     JavaScript allow for us to get information about data including strings. One of them is .length and it is used like so:
@@ -461,10 +529,142 @@ myString.[myString.length-1]      //  will return t
 myString.[myString.length-4]      //  will return r</code>
 </pre>
                     </section>
-                    </section>
                     <section>
                          <h3>Arrays</h3>
+                         <p>
+                              Arrays are JavaScript variables that store many pieces of data. Arrays are contained in square brackets with comma separated items and can be manipulated in various ways!
+                         </p>
+                         <pre>
+                              <code>var myArray=["Catherinitude", "Code", 13, "Happy", 
+"challenge", "axis", "family", "buy", "soil", "fence", 
+"unique", "familiar", "incongruous", 
+"grass", "cultural", "pool", "divorce", "flavor"];</code></pre>
+                         <p>
+                              Arrays items can be anything, even other arrays! In the above array of simple items myArray.length would return 18, the the array below my.Array.length would return 3.
+                         </p>
+                         <pre>
+                              <code>var myArray=[
+["Catherinitude", "Code", 13],
+["Happy", "challenge", 14], 
+["family", "buy", 12], 
+["soil", "fence", 8]];</code></pre>
+                         <table>
+                              <thead>
+                                   <tr>
+                                        <th colspan="3">Working with Arrays</th>
+                                   </tr>
+                              </thead>
+                              <tr>
+                                   <th>Method</th>
+                                   <th>Code</th>
+                                   <th>Description</th>
+                              </tr>
+                              <tr>
+                                   <td>Selecting</td>
+                                   <td>myArray[0]</td>
+                                   <td>Returns the value at the location in the square brackets.</td>
+                              </tr>
+                              <tr>
+                                   <td>.length</td>
+                                   <td>myArray.length</td>
+                                   <td>Returns number of items in the array (remember 0 indexing)</td>
+                              </tr>
+                              <tr>
+                                   <td>.push()</td>
+                                   <td>myArray.push("New")</td>
+                                   <td>Adds "New" to the end of the array</td>
+                              </tr>
+                              <tr>
+                                   <td>.pop()</td>
+                                   <td>myArray.pop()</td>
+                                   <td>Removes the last item in an array.</td>
+                              </tr>
+                              <tr>
+                                   <td>.shift()</td>
+                                   <td>myArray.shift()</td>
+                                   <td>Removes the first item in an array.</td>
+                              </tr>
+                              <tr>
+                                   <td>unshift()</td>
+                                   <td>myArray.unshift()</td>
+                                   <td>Adds item in first position in an array.</td>
+                              </tr>
+                         </table>
+                         <p>
+                              Using combinations of the above methods can be quite powerful. For example you can change items in an array via selecting it then setting it to a new value. Navigating an arrays of arrays can be more complicated, but only as complicated as the array. for example:
+                         </p>
+                         <pre>
+                              <code>var arr = [
+[1,2,3],
+[4,5,6],
+[7,8,9],
+[[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
+
+                              </code>
+                         </pre>
                     </section>
+                    <section>
+                         <h3>Functions</h3>
+                         <p>
+                              Functions allow for the use of code repeatably. This is useful so that you can repeat actions without having to retype code. Keeping repetition of code to a minimum is important. Concise code helps keep code easy to understand as well as optimized. If you need to do something more then once if belongs in a function!  A function looks like this:
+                         </p>
+                         <pre>
+                              <code>function functionName(comma, separated, parameters){
+// function code lives here for example:
+return(comma + separated + parameters);
+//This will add all three parameters values together.
+}                            
+functionName(1, 5, 4) // would return 10
+</code>
+                         </pre>
+                         <p>
+                              Generally your function will need to return something this is done with return() method. Once the function returns something it stops working so only one return per function can be returned. Functions can be super simple or huge and complicated. 
+                         </p>
+                    </section>
+                    <section>
+                         <h3>Scope</h3>
+                         <p>
+                              Scope is basically where variables can be seen / used. There are several levels of scope. The largest scope is global scope.  Variables declared with the var keyword are created in global scope. Global scope lets everything interact with it and can have some issues. The other type os scope is local scope. There is a nice article at <a href="https://scotch.io/tutorials/understanding-scope-in-javascript" target="_blank">Scotch.io</a> on what each scope is and how it is used.
+                         </p>
+                    </section>
+                    <section>
+                    <h3>If Statements</h3>
+                    <p>
+                         If statements are used to test data and do things based on the outcome of the tests. This testing is done with logical operators found above in <a href="#logops">Logical Operators Table</a>. 
+                    </p>
+                    <pre>
+                         <code>if (testing logic) {
+     do this if testing logic is true
+} 
+     do this if testing logic is false
+}</code></pre>
+                    <p>
+                    The above is the most basic if statements, they can be made more complicated like this:
+                    </p>
+                    <pre>
+                         <code>if (testing logic 1) {
+if testing logic 1 is true do this
+} else if (testing logic 2) {
+if testing logic 2 is true do this
+} else if (testing logic 3) {
+if testing logic 3 is true do this
+} else if (testing logic4) {
+if testing logic 4 is true do this
+} else {
+if everything is false do this
+}</code></pre>
+                         <p>It is important when working with longer statements to keep in mind that JavaScript reads and executes code in top down left right order. This means if you have a test for  less than 25 followed by a test for less than 5 and your testing 4, code will be triggered at less than 25 and the less than 5 will never be tested.
+                         </p>
+                    </section>
+                    <section>
+                    <h3>Switches</h3>
+                    </section>
+                         
+               </section>
                <section h2 id="es6">
                     <h2>ES6</h2>
                </section>

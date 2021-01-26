@@ -86,14 +86,16 @@ table { border-collapse: collapse; 	border-spacing: 0; }
           text-align: left;
      }
      table{
-          min-width: 50%;
+          min-width: 75%;
           margin-left: 3em;
           margin-top: 3em;
+          
      }
      thead th{
           padding: 1em 0;
           text-align: center;
      }
+
 /*  styles for the navigation */
      nav{
           background-color: black;
@@ -132,7 +134,7 @@ table { border-collapse: collapse; 	border-spacing: 0; }
           display: block;
           padding: 1em;
           width: fit-content;
-          font-size: 2em;
+          font-size: 1.5em;
           line-height: 2em;
           letter-spacing: .25em;
      }  
