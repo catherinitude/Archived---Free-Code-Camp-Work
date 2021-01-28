@@ -662,8 +662,48 @@ if everything is false do this
                     </section>
                     <section>
                     <h3>Switches</h3>
+                    <p>Like If statements switch statements allow for logical manipulation of data by matching rules with code to run. In switch statements you use a default value to as a catch all. When something matched the case the code is run until it hits a break statement.</p>
+                    <pre>
+                         <code>switch (testing logic) {
+     case 0:
+          code here is triggered when 0 is the result of the testing logic
+          break;
+     case "apple":
+          code here is triggered when "apple" is the result of the testing logic
+          break;
+     case 32:
+          code here is triggered when 0 is the result of the testing logic
+          break;
+     default :
+          code here is triggered when no other cases are met that is why its at the end
+          break;
+     }</code>
+                    </pre>
                     </section>
-                         
+                    <section>
+                         <h3>Boolean Magic</h3>
+                         <p>sometimes you can skip if statements and switch statements if you just need to know if something is true or false. </p>
+                    <pre>
+                         <code>function isEqual(a,b) {
+     if (a === b) {
+          return true;                                      
+     } else {
+          return false;
+     }
+     }
+
+     --OR--
+
+     function isEqual(a,b) {
+          return a === b;
+        }
+
+                         </code>
+                    </pre>
+                    </section>
+                    <section>
+                         <h3>Objects</h3>
+                    </section>
                </section>
                <section h2 id="es6">
                     <h2>ES6</h2>
