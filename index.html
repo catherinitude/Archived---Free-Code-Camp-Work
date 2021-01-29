@@ -703,6 +703,47 @@ if everything is false do this
                     </section>
                     <section>
                          <h3>Objects</h3>
+                         <p>Objects are a data type that holds/owns a set of data.  This data is arranged in key value pairs and should be properties about the object itself.</p>
+                         <pre>
+                              <code>Basic Object:
+var car = {
+     "make": "ford",
+     "model": "focus",
+     "year": 2020,
+     "color": "red"
+     };             
+
+     More Advanced Object:
+
+var person ={
+     "firstName" : "Al",
+     "lastName" : "Bundy",
+     "age" : "52",
+     "status" : "Married with children",
+     "family :{
+          "partner" : "Peggy",
+          "children": ["Kelly","Bud"]
+     },
+     "job" : "shoe sales"
+};                </code>
+                         </pre>
+                         <p>
+                              To gain access to the data inside an object you cant use dot or bracket notation. if the key has spaces in it you must use bracket notation.
+                              <pre><code>person.job</code></pre>
+                              <pre><code>person["age"]</code></pre>
+                         </p>
+                         <p>You can directly edit values in an object or create a new key value pair like so:
+                              <pre><code>car.make = "Dodge"; or car["make"] = "Dodge";></code></pre>                  
+                         </p>
+                    </p>
+                    <p>You can remove key value pair like so:
+                         <pre><code>delete car.make;</code></pre>                  
+                    </p>
+                    <p>You can check to see if an object has a key or key value pair like so:
+                         <pre><code>person.hasOwnProperty(age)   //This will return true because the person object has an age key.
+                         </code></pre>                  
+                    </p>
+                    
                     </section>
                </section>
                <section h2 id="es6">
