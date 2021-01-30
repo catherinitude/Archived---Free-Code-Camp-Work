@@ -736,14 +736,70 @@ var person ={
                               <pre><code>car.make = "Dodge"; or car["make"] = "Dodge";></code></pre>                  
                          </p>
                     </p>
-                    <p>You can remove key value pair like so:
+                    <p>
+                         You can remove key value pair like so:
+                    </p>
                          <pre><code>delete car.make;</code></pre>                  
-                    </p>
-                    <p>You can check to see if an object has a key or key value pair like so:
-                         <pre><code>person.hasOwnProperty(age)   //This will return true because the person object has an age key.
-                         </code></pre>                  
-                    </p>
                     
+                    <p>You can check to see if an object has a key or key value pair like so:
+                         <pre><code>person.hasOwnProperty(age)   //This will return true because the person object has an age key. As true or false. </code></pre>                  
+                    </p>          
+                    </section>
+                    <section>
+                         <h3>While loops</h3>
+                         <p>
+                              You can use while loops to do things while something  is true.These are not very common in the wild.
+                         </p>
+                         <pre>
+                              <code>var i = 0;
+while(i < 5) {
+Code stuff to do
+i++;  //add one to iteration variable 
+}
+This will loop executing the code 5 times
+</code></pre>
+                    </section>
+                    <section>
+                         <h3>For loops</h3>
+                         <p>
+                              You can use for loops to do things for a set number of loops.These are vary common and can even be nested into super complicated messes
+                         </p>
+                         <pre>
+                              <code>for ([initialization]; [condition]; [final-expression]){
+do this}
+
+what this looks like with  code:
+
+for (var i = 0; i < 5; i++) {
+     Do the stuff in here
+   }
+</code></pre>
+                    </section>
+                    <section>
+                         <h3>Do...While Loops</h3>
+                         <p>
+                              This loop does the do part no mater what then applies logic to see if it should keep going. 
+                         </p>
+                         <pre>
+                              <code>var i = 0;
+do {
+     do this then add one to 1 and check logic.
+     1++
+} while (i < 5);
+</code></pre>
+                    </section>
+                    <section>
+                         <h3>Recursion</h3>
+                         <p>
+                              Recursion is easy to explain hard to understand. Recursion is a piece of code (like a function) calling/using itself. This can cause endless looping so having a base case / "out" is important. See:
+                              <ul class=link-list>
+                                   <li><a href="https://www.youtube.com/watch?v=vPEJSJMg4jY" target="_blank">Recursion in software development - Free Code Camp</a></li>
+                                   <li><a href="https://www.youtube.com/watch?v=Mv9NEXX1VHc" target="_blank">What on Earth is Recursion? - Computerphile</a></li>
+                                   <li><a href="https://www.youtube.com/watch?v=KEEKn7Me-ms" target="_blank">Algorithms: Recursion - hackerRank</a></li>
+                                   <li><a href="https://www.youtube.com/watch?v=6oDQaB2one8" target="_blank">What Is Recursion - In Depth- Web Dev Simplified</a></li>
+                              </ul>
+                         </p>
+                         
                     </section>
                </section>
                <section h2 id="es6">
@@ -770,6 +826,7 @@ var person ={
                <section h2 id="intalscr">
                     <h2>Intermediate Algorithm Scripting</h2>
                </section>
+
 
           </section>     
      </main>

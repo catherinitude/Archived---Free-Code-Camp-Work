@@ -152,7 +152,10 @@ table { border-collapse: collapse; 	border-spacing: 0; }
           padding: 2em;
           font-size: 1.8em;
      }
-
+     .link-list li{
+          font-size: 1.4em;
+          padding:1em;
+     }
 /* Main Area Styling */
      main{
           margin-left: 29em;
