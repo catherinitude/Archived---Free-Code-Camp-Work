@@ -798,12 +798,162 @@ do {
                                    <li><a href="https://www.youtube.com/watch?v=KEEKn7Me-ms" target="_blank">Algorithms: Recursion - hackerRank</a></li>
                                    <li><a href="https://www.youtube.com/watch?v=6oDQaB2one8" target="_blank">What Is Recursion - In Depth- Web Dev Simplified</a></li>
                               </ul>
+                         </p>     
+                    </section>
+                    <section>
+                         <h3>Math Object</h3>
+                         <p>
+                              JavaScript comes with a set of useful math methods to do things like round, find exponential values, and even generate random numbers. A list of them can be found at <a href="https://devdocs.io/javascript-math/" target="_blank">DevDocs.io</a>, or a search for what you need to so mathematically will get you what you need. 
                          </p>
-                         
+                         <pre><code>Cool trick for rng whole numbers is:
+Math.floor(Math.random() * (max - min + 1)) + min
+
+This will give you a random whole number between the max and min values</code></pre>
+                    </section>
+                    <section>
+                         <h3>parseInt()</h3>
+                         <p>parseInt() is a function that turns strings into numbers so long as the string is just numbers. NaN will be returned if it fails. parseInt takes two arguments the first for the number and the second for the base of the number in the string. More information on the math base stuff at <a href="https://simple.wikipedia.org/wiki/Base_(mathematics)" target="_blank">wikipedia</a>.
+                         </p>
+
+                    </section>
+                    <section>
+                         <h3>Ternary Operator</h3>
+                         <p>
+                              Also called the conditional operator. This allows you to so some logical comparison and have a true and false action.
+                         </p>
+                         <pre><code>(conditional / logical test) ? (if true do) : (if false do);</code></pre>
+                         <p>
+                              Or you can link them up for many tests:
+                         </p>
+                         <pre><code>(conditional / logical test) ? (if <-- true do) : (first was false so is this other conditional / logical test true?) ? (if true do) : (if false do</code></pre>
+                    </section>
+                    <section>
+                         <h3>Problems to Review</h3>
+                         <p>
+                              These gave me some issues and did not come naturally, hoping to review them as I move on so that they do come naturally. 
+                         </p>
+                         <ul class=link-list>
+                              <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup" target="_blank">Profile LookupPassed</a></li>
+                              <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-countdown" target="_blank">Use Recursion to Create a Countdown</a></li>
+                              <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers" target="_blank">Use Recursion to Create a Range of NumbersPassed</a></li>
+                         </ul>
                     </section>
                </section>
                <section h2 id="es6">
                     <h2>ES6</h2>
+                         <p>
+                              ES6 is the most resent version of JavaScript, its adds the following features:
+                         </p>
+                         <pre><code>Note: Not all browsers support ES6 features. 
+If you use ES6 in your own projects, 
+you may need to use a program (transpiler) 
+to convert your ES6 code into ES5 until browsers support ES6.</code></pre>
+                    <section>
+                         <h3>let and const</h3>
+                         <p>
+                              let and const are keywords that allow you to control how variable can be accessed and manipulated. <br>
+                              If you set a variable with the let keyword you can change its value but can not redeclare it it also respect scope. With var you can redeclare a variable any time. <br>
+                              const sets up the variable as 'read only'. you can't reassign them. These variables are commonly uppercase. <br>
+                              Unless you know that you need to change the data, start whit a const then change it to a let when you need to change it, Don't use vars anymore. <br>
+                              Exceptions to the const read only rule are objects (including arrays and functions). You can change the contents of these items, but can't rename them. To protect these you can you Object.freeze(objName)
+                         </p>
+                    </section>
+                    <section>
+                         <h3>Arrow Functions</h3>
+                         <p>
+                              Arrow functions are inline functions.
+                         </p>
+                         <pre><code>Normal Function:
+const myFunc = function(arr1, arr2) {
+const myVar = "value";
+return myVar;
+}
+
+Arrow Function:
+const myFunc = (arr1, arr2) => {
+const myVar = "value";
+return myVar;
+}
+                         </code></pre>
+                    </section>
+                    <section>
+                         <h3>Default Parameters</h3>
+                         <p>
+                              Default parameters are used if someone forgets to add a it when it is specified.
+                              <pre><code>const greeting = (name = "Anonymous") => "Hello " + name;
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous   </code></pre>
+                         </p>
+                    </section>
+                    <section>
+                         <h3>Rest Parameter</h3>
+                         <p>
+                              This allows you to accept any number of parameters as well as use map, filter, and reduce with them.
+                              <pre><code>function howMany(...args) {
+return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2)); // You have passed 3 arguments.
+console.log(howMany("string", null, [1, 2, 3], { })); // You have passed 4 arguments.    </code></pre>
+                         </p>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+                    <section>
+                         <h3></h3>
+                         <p>
+                              
+                         </p>
+                         <pre><code></code></pre>
+                    </section>
+
+
                </section>
                <section h2 id="reg-exp">
                     <h2>Regular Expressions</h2>
