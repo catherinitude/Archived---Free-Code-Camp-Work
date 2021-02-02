@@ -987,25 +987,89 @@ const profileUpdate = (profileData) => {
                          <pre><code>    const greeting = `Hello, my name is ${person.name}        </code></pre>
                     </section>
                     <section>
-                         <h3></h3>
+                         <h3>Object Literals</h3>
                          <p>
-                              
+                              This allows you to set object key pairs without needing to set them up so the following will work just fine.  Things passed in will auto fill out and create the object with keys being the the parameters and values being the information passed to the function.
                          </p>
-                         <pre><code></code></pre>
+                         <pre><code>const createPerson = (name, age, gender) => {
+// Only change code below this line
+return {
+     name,
+     age,
+     gender
+};</code></pre>
                     </section>
                     <section>
-                         <h3></h3>
+                         <h3>Concise Declarative Functions</h3>
                          <p>
-                              
+                              You can remove the function keyword and colon altogether when defining functions in objects 
                          </p>
-                         <pre><code></code></pre>
+                         <pre><code>const person = {
+name: "Taylor",
+sayHello() {
+     return `Hello! My name is ${this.name}.`;
+}
+};</code></pre>
                     </section>
                     <section>
-                         <h3></h3>
+                         <h3>Constructors, getters and setters</h3>
                          <p>
-                              
+                              Constructors allow you to create objects based on a 'template' using the 'this' keyword. It is considered good practice to name constructor functions with an upper-case first letter. Getters return values keeping them private and setters modify these private values.
                          </p>
-                         <pre><code></code></pre>
+                         <pre><code>class Book {
+constructor(author) {
+     this._author = author;
+}
+// getter
+get writer() {
+     return this._author;
+}
+// setter
+set writer(updatedAuthor) {
+     this._author = updatedAuthor;
+}
+}
+const novel = new Book('anonymous');
+console.log(novel.writer);  // anonymous
+novel.writer = 'newAuthor';
+console.log(novel.writer);  // newAuthor</code></pre>
+                    </section>
+                    <section>
+                         <h3>Module Scripts</h3>
+                         <p>
+                              Module scripts allows you to define a script in one place, export it and import it in another file. This allows for easy maintenance and concise code. 
+                         </p>
+                         <pre><code><script type="module" src="filename.js"></script></code></pre>
+                    </section>
+                    <section>
+                         <h3>Code exporting</h3>
+                         <p>
+                              You can export functions or variables too, like so:
+                         </p>
+                         <pre><code>export const add = (x, y) => {
+return x + y;
+}
+                         
+                         
+or even:
+const add = (x, y) => {
+     return x + y;
+   }
+   
+   export { add, anotherFunction, aThirdThing };</code></pre>
+                    </section>
+                    <section>
+                         <h3>Code importing</h3>
+                         <p>
+                              Once it is exported you import it like so:
+                         </p>
+                         <pre><code>import {  add, anotherFunction, aThirdThing  } from 'file.js';
+
+import * as myMathModule from "./math_functions.js";
+This will import by creating an object with the variable name myMathModule
+
+myMathModule.add(2,3);// to use  
+                         </code></pre>
                     </section>
                     <section>
                          <h3></h3>
@@ -1022,6 +1086,11 @@ const profileUpdate = (profileData) => {
                          <pre><code></code></pre>
                     </section>
 
+                    <section>
+                         <h3>JavaScript ES6, ES7, ES8: Learn to Code on the Bleeding Edge (Full Course)</h3>
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/nZ1DMMsyVyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </section>
 
                </section>
                <section h2 id="reg-exp">
