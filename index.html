@@ -1039,7 +1039,7 @@ console.log(novel.writer);  // newAuthor</code></pre>
                          <p>
                               Module scripts allows you to define a script in one place, export it and import it in another file. This allows for easy maintenance and concise code. 
                          </p>
-                         <pre><code><script type="module" src="filename.js"></script></code></pre>
+                         <pre><code>&lt;script type="module" src="filename.js"></script></code></pre>
                     </section>
                     <section>
                          <h3>Code exporting</h3>
@@ -1072,21 +1072,28 @@ myMathModule.add(2,3);// to use
                          </code></pre>
                     </section>
                     <section>
-                         <h3></h3>
+                         <h3>Promises</h3>
                          <p>
-                              
+                              Promises are used to deal with asynchronously code. They are set up to wait for something then handle what happens next.
                          </p>
-                         <pre><code></code></pre>
-                    </section>
-                    <section>
-                         <h3></h3>
-                         <p>
-                              
-                         </p>
-                         <pre><code></code></pre>
-                    </section>
+                         <pre><code>const makeServerRequest = new Promise((resolve, reject) => {
+     
+if(responseFromServer) {
+     resolve("We got the data");
+} else {  
+     reject("Data not received");
+}
+});
 
-                    <section>
+makeServerRequest.then(result => {
+console.log(result);}
+)
+
+makeServerRequest.catch(error => {
+console.log(error);
+});</code></pre>
+                    </section>
+                         <section>
                          <h3>JavaScript ES6, ES7, ES8: Learn to Code on the Bleeding Edge (Full Course)</h3>
                          <iframe width="560" height="315" src="https://www.youtube.com/embed/nZ1DMMsyVyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -1095,6 +1102,246 @@ myMathModule.add(2,3);// to use
                </section>
                <section h2 id="reg-exp">
                     <h2>Regular Expressions</h2>
+                    <p>
+                         Regular Expressions are special strings that help search, match, and manipulate text. A wonderful information packed web page can be found on <a href="https://javascript.info/regexp-introduction" target="_blank">JavaScript.info</a>
+                    </p>
+                    <section>
+                         <h3>.test()</h3>
+                         <p>
+                              The test method can be used to see if parts of a string match. To find if there is a match to the word "brave" you would use the regular expression /brave/ like so:
+                         </p>
+                         <pre><code>let moveName = "The brave little Toaster";
+let find = /brave/;
+testRegex.test(testStr);
+// Returns true</code></pre>
+                         <p>
+                         You can even use alternation / or operator : |                              
+                         </p>
+                         <pre><code>let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result = petRegex.test(petString);
+// Returns true is dog, cat, bird, or fish are found.</code></pre>
+                    </section>
+                    <section>
+                         <h3>Defining better searches</h3>
+                         <p>
+                             There are a few ways to define searches in a more direct and flexable way.  
+                         </p>
+                         <table>
+                              <tbody>
+                                   <tr>
+                                        <th style="width:15%">Name</th>
+                                        <th style="width:15%">Example Code</th>
+                                        <th style="width:30%">Example Match</th>
+                                        <th style="width:*">Explanation</th>
+                                   </tr>
+                                   <tr>
+                                        <td> Insensitive flag </td>
+                                        <td> /word/i </td>
+                                        <td> word, WORD, Word, worD (...ect) </td>
+                                        <td> Matches all cases of the word </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Global  flag </td>
+                                        <td> /word/g </td>
+                                        <td> ALL instances of word </td>
+                                        <td> Matches all instances of the word not just the first </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Wild card ( . ) </td>
+                                        <td> /wo./ </td>
+                                        <td> word, wow, wonderful, working (...ect) </td>
+                                        <td> Matches anything </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Character classes [] </td>
+                                        <td> /b[aiu]/ </td>
+                                        <td> This will match bag, big, and bug but not ben </td>
+                                        <td> The letters in the [ ] will be matched </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Character Sets [?-?] </td>
+                                        <td> /[a-z]/gi </td>
+                                        <td> Will match all letters </td>
+                                        <td> You can set the search range by changing the values, [1-7] will only return the numbers 1-7 </td>
+                                   </tr>
+                                   <tr>
+                                        <td> ^ within char sets</td>
+                                        <td> /[^aeiou]/gi </td>
+                                        <td> Will match all characters not a vowel, including spaces and special characters  </td>
+                                        <td> Excludes items from matching</td>
+                                   </tr>
+                                   <tr>
+                                        <td> + </td>
+                                        <td> /t+/ </td>
+                                        <td> would match - t, tt, ttt, tttt (ect) instead of t t t t t t t t t </td>
+                                        <td> Matches repetitive characters as they are if the appear 1 or more times </td>
+                                   </tr>
+                                   <tr>
+                                        <td> * </td>
+                                        <td> /go*/ </td>
+                                        <td> would match goal or good or gooooaaal </td>
+                                        <td> Matches characters that occur zero or more times </td>
+                                   </tr>
+                                   <tr>
+                                        <td> ^ outside char sets </td>
+                                        <td> /^Word/ </td>
+                                        <td> Will only find Word if its the first thing in a string. </td>
+                                        <td> Matches characters that occur at the beginning of strings </td>
+                                   </tr>
+                                   <tr>
+                                        <td> $ </td>
+                                        <td> /Word$/ </td>
+                                        <td> Will only find Word if its the last thing in a string. </td>
+                                        <td> Matches characters that occur at the end of strings </td>
+                                   </tr>
+                                   <tr>
+                                        <td> \w </td>
+                                        <td> /\w/g </td>
+                                        <td> Matches everything letters and numbers and _ in the search </td>
+                                        <td> Equal to [A-Za-z0-9_]. Matches everything but upper and lowercase letters plus numbers and _. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> \W </td>
+                                        <td> /\W/g </td>
+                                        <td> Matches everything not a letter, numberor _ in the search </td>
+                                        <td> Equal to [^A-Za-z0-9_]. Matches everything but  letters, numbers and _. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> /d </td>
+                                        <td> /\d/g; </td>
+                                        <td> Will match numbers </td>
+                                        <td> Equal to the character class [0-9] </td>
+                                   </tr>
+                                   <tr>
+                                        <td> /D </td>
+                                        <td> /\D/g; </td>
+                                        <td> Will match NON numbers </td>
+                                        <td> Equal to the character class [^0-9] </td>
+                                   </tr>
+                                   <tr>
+                                        <td> \s </td>
+                                        <td> /\s/g </td>
+                                        <td> Will match the white space in the string </td>
+                                        <td> Matches whitespace (spaces) </td>
+                                   </tr>
+                                   <tr>
+                                        <td> \S </td>
+                                        <td> /\S/g </td>
+                                        <td> Will match the NON white space in the string </td>
+                                        <td> Matches NON whitespace (spaces) </td>
+                                   </tr>
+                                   <tr>
+                                        <td> { min, max} </td>
+                                        <td> /a{3,5}h/ </td>
+                                        <td> aaah, aaaah </td>
+                                        <td> Will return what has 3-5 a's and ends with h. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> { min, max} </td>
+                                        <td> /a{3,}h/ </td>
+                                        <td> aaah, aaaaaaaaaaaaaaah </td>
+                                        <td> Will return what has 3+ a's and ends with h. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> { # } </td>
+                                        <td> /a{5}h/ </td>
+                                        <td> aaaaah </td>
+                                        <td> Will return what has 5 a's and ends with h. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> ? </td>
+                                        <td> /favou?rite/ </td>
+                                        <td> favorite OR  favourite</td>
+                                        <td> Checks for zero or one of the preceding element. </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Positive Lookahead (?=)</td>
+                                        <td> /(?=\w{3,6})/ </td>
+                                        <td> Check for a 3-6 alpha numeric value </td>
+                                        <td> Will make sure the element in the search pattern is there, but won't actually match it </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Negative Lookahead (?!)</td>
+                                        <td> b </td>
+                                        <td> b </td>
+                                        <td> Will look to make sure the element in the search pattern is not there </td>
+                                   </tr>
+                                   <tr>
+                                        <td> Mixed Groupings </td>
+                                        <td> /P(engu|umpk)in/g </td>
+                                        <td> Pumpkin or Penguin </td>
+                                        <td> Checks for groups of characters  </td>
+                                   </tr>
+                                 
+  
+                              </table>
+
+                    </section>
+                    <section>
+                         <h3>.match()</h3>
+                         <p>
+                              .test() will tell you if your expressions are in your search string as a bullion value, but .match lets you use it.
+                         </p>
+                         <pre><code>let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result = extractStr.match(codingRegex); // Change this line
+console.log(result);
+
+
+This returns the following array:
+
+[ 'coding',
+  index: 18,
+  input: 'Extract the word \'coding\' from this string.',
+  groups: undefined ] </code></pre>
+                    </section>
+                    <section>
+                         <h3>Greedy vs Lazy</h3>
+                         <p>
+                              By default regular expressions are greedy, they give you the longest match. For example  the expression /c[a-z]*t/ would return the longest word that starts with c and ends with t.  You can make the expression lazy by adding a question mark like so: /c[a-z]*?t/ 
+                    </section>
+                    <section>
+                         <h3>Using capture groups</h3>
+                         <p>
+                              You can search for repeat substrings using capture groups. Parentheses, ( and ), are used to find repeat substrings. You put the regex of the pattern that will repeat in between the parentheses.
+<br>
+To specify where that repeat string will appear, you use a backslash (\) and then a number. This number starts at 1 and increases with each additional capture group you use. An example would be \1 to match the first group.
+                         </p>
+                         <pre><code></code>let repeatStr = "regex regex";
+let repeatRegex = /(\w+)\s\1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex); // Returns ["regex regex", "regex"]</pre>
+                    </section>
+                    <section>
+                         <h3>Search and Replace</h3>
+                         <p>
+                              You can search and replace text in a string using .replace() on a string.
+                         </p>
+                         <pre><code></code>let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+// Returns "The sky is blue."
+
+or change 2:
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+// Returns "Camp Code"
+
+or change 3:
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = '$3 $2 $1'; // Change this line
+let result = str.replace(fixRegex, replaceText);</code></pre>
+                    </section>
+                    <section>
+                         <h3>Remove Whitespace from Start and End</h3>
+                         <p>
+                              You can select whitespace and replace it with "" to remove it like so:
+                              <br> you could also use String.prototype.trim()
+                         </p><pre><code>let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line</code></pre>
+                    </section>
                </section>
                <section h2 id="jsdebug">
                     <h2>Debugging</h2>

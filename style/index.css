@@ -73,8 +73,9 @@ table { border-collapse: collapse; 	border-spacing: 0; }
       }
      td{
           font-size: 1.6em;   
-          padding: 1em 0;
+          padding: 1em 2em;
           border-bottom: 1px dashed peru;
+          
       }
      .centered{
           text-align:center;
@@ -86,10 +87,10 @@ table { border-collapse: collapse; 	border-spacing: 0; }
           text-align: left;
      }
      table{
-          min-width: 75%;
+          min-width: 90%;
           margin-left: 3em;
           margin-top: 3em;
-          
+          white-space: wrap;
      }
      thead th{
           padding: 1em 0;
