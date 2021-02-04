@@ -1329,8 +1329,8 @@ or change 2:
 
 or change 3:
 let str = "one two three";
-let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
-let replaceText = '$3 $2 $1'; // Change this line
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; 
+let replaceText = '$3 $2 $1';
 let result = str.replace(fixRegex, replaceText);</code></pre>
                     </section>
                     <section>
@@ -1339,12 +1339,63 @@ let result = str.replace(fixRegex, replaceText);</code></pre>
                               You can select whitespace and replace it with "" to remove it like so:
                               <br> you could also use String.prototype.trim()
                          </p><pre><code>let hello = "   Hello, World!  ";
-let wsRegex = /^\s+|\s+$/g; // Change this line
-let result = hello.replace(wsRegex, ""); // Change this line</code></pre>
+let wsRegex = /^\s+|\s+$/g; 
+let result = hello.replace(wsRegex, ""); </code></pre>
                     </section>
                </section>
                <section h2 id="jsdebug">
                     <h2>Debugging</h2>
+                    <p>Debugging is the process of finding errors so that you can fix them. </p>
+               </section>
+               <section>
+                    <h3>Logging to the Development Console</h3>
+                    <p>
+                         You can log all kinds of things to the development console with console.log(thing to log). This lets you check values as you code, figure out why the expected value is not occurring. among other things.<br>
+                         From time to time you may need to check on that type of data you are working with, you can do that console logging typeof<br>
+                         If things get cluttered you can use console.clear() to clear things out.
+                    </p>
+                    <per><code>console.log(myVariable);  //will print the value of myVariable to the console
+console.log(typeof 0); // outputs "number"
+console.log(typeof []); // outputs "object" </code></per>
+               </section>
+               <section>
+                    <h3>Console Errors</h3>
+                    <p>
+                         Many errors will pop up in your console to help debugging. Reference Errors means that something code is looking for is missing the "reference" is not found. Most likely this is a spelling or case error in a variable somewhere. Syntax Errors will tell you what the issue is as well as the locations. These errors are missing or extra syntactical information like brackets or commas.
+                    </p>
+               </section>
+               <section>
+                    <h3>Assignment vs. Equality check</h3>
+                    <p>
+                         It is easy to forget to add the second = for equality checks and end up reassigning or causing other errors while coding. This is easy to check for but can sometimes be missed.
+                    </p>
+               </section>
+               <section>
+                    <h3>Common function Errors</h3>
+                    <p>
+                         Remember to add the () when calling functions that do not have perimeters failure to do so will cause errors. Also make sure to pass things into functions in the correct order.
+                    </p>
+               </section>
+               <section>
+                    <h3>Off By One Errors (OBOE)</h3>
+                    <p>
+                         These happen when trying to target a specific index. for example:
+                    </p>
+                         <pre><code>let alphabet = "abcdefghijklmnopqrstuvwxyz";
+                              let len = alphabet.length;
+                              for (let i = 0; i <= len; i++) {
+                                // loops one too many times at the end
+                                console.log(alphabet[i]);
+                              }
+                              for (let j = 1; j < len; j++) {
+                                // loops one too few times and misses the first character at index 0
+                                console.log(alphabet[j]);
+                              }
+                              for (let k = 0; k < len; k++) {
+                                // Goldilocks approves - this is just right
+                                console.log(alphabet[k]);
+                              }</code></pre>
+                    
                </section>
                <section h2 id="basicds">
                     <h2>Basic Data Structures</h2>
